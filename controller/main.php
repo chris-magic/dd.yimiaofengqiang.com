@@ -12,13 +12,13 @@ class main extends spController{
 			;
 		}
 		if($is_iphone){
-			header("Location:http://bd.m.yimiaofengqiang.com".$_SERVER[REQUEST_URI]);
+			header("Location:http://dd.m.yimiaofengqiang.com".$_SERVER[REQUEST_URI]);
 		}
 		if($is_ipad){
-			header("Location:http://bd.m.yimiaofengqiang.com".$_SERVER[REQUEST_URI]);
+			header("Location:http://dd.m.yimiaofengqiang.com".$_SERVER[REQUEST_URI]);
 		}
 		if($is_android){
-			 header("Location:http://bd.m.yimiaofengqiang.com".$_SERVER[REQUEST_URI]);
+			 header("Location:http://dd.m.yimiaofengqiang.com".$_SERVER[REQUEST_URI]);
 		}
 		
 	}

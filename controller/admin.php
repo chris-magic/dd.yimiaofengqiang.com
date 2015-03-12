@@ -145,7 +145,7 @@ class admin extends spController{
                         for($i=0;$i<count($yqtout);$i++){
                             $item = $pros->find(array('iid'=>$yqtout[$i][1]));
                             $id = $item['id'];
-                            $yqtout[$i][7] = 'http://bd.yimiaofengqiang.com/main/deal/id/'.$id.'.html';
+                            $yqtout[$i][7] = 'http://dd.yimiaofengqiang.com/main/deal/id/'.$id.'.html';
                             $yqtout[$i][7] = getshorturl($yqtout[$i][7]);
                         }
 //                        var_dump($yqtout);

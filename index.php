@@ -10,7 +10,7 @@ $spConfig = array(
 		'password' => 'N]j]78R>jPKEML7edAC(',  // 数据库密码
 //		'password' => '',
 //		'database' => 'heimei' // 数据库的库名称
-		'database' => 'bd.yimiaofengqiang.com' // 数据库的库名称					
+		'database' => 'dd.yimiaofengqiang.com' // 数据库的库名称					
 	),
 	// smarty配置
 	'view' => array(

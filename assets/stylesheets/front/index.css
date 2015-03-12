@@ -1,0 +1,120 @@
+@CHARSET "gbk";
+*{
+	padding:0px;
+	margin:0px;
+}
+body{
+	background:url(/assets/images/front/index/background_bg.png);
+}
+.main-index{
+	width:1080px;margin:0 auto;
+}
+.main-index .sub-index{
+	text-align:center;padding-top:20px;
+}
+.main-index .sub-index a{
+	text-decoration:none;padding:0 10px;font-size:16px;color:#acacac; 
+}
+.main-index .sub-index a.cur{
+	color:#333;
+}
+.item-list{
+	margin-top:10px;width:1110px;
+}
+.item-list .item-row{
+	position:relative;
+}
+.item-list .row-left{
+	margin-left:0px;
+}
+.item-list .row-right{
+	margin-right:0px;
+}
+.item-list .item{
+	background:#fff;margin:8px 5px auto 0px;border:solid 3px #EDF1ED;width:260px;float:left;
+}
+.item-list .item:hover{
+	border:solid 3px #FF3366;
+	background:#F9F0E1;
+}
+/* 每个商品单元内的内容定位 */
+.item-list .item .position{
+	width:250px;margin:1px auto;padding:3px 0px 1px 0px;
+}
+/* 每个商品单元内的内容定位 */
+.item-list .item a{
+	text-decoration:none;
+}
+.item-list .item .item-title{
+	height:16px;
+	overflow:hidden;
+} 
+.item-list .item .item-title a{
+	color:#5e5e5e;font-size:14px;	
+}
+
+.item-list .item .item-title a:hover{
+	text-decoration:underline;
+	color:red;
+}
+.item-list .item .item-pic{
+	position:relative;
+}
+.item-list .item .item-pic img{
+	width:260px;height:260px;
+}
+.item-list .item .item-pic .hd{
+	width:100%;height:24px;text-align:center;color:#fff;opacity:0.4;filter:alpha(opacity=40);background:#000;position:absolute;bottom:0px;
+}
+.item-list .item .item-pic .hdtime{
+	width:100%;height:24px;text-align:center;color:#fff;position:absolute;bottom:0px;
+}
+.item-list .item .item-price{
+	margin:5px auto;padding:0px;height:56px;font-weight:bolder;font-size:28px;
+	line-height:42px;position:relative;
+}
+.item-list .item .item-price .price{
+	letter-spacing: -2px;font-family: "Microsoft Yahei","Arial","Verda","tahoma";
+	display: inline-block;margin-top: 5px;font-size:38px;color:#FF3366;
+}
+.item-list .item .item-price .price span{
+	font-size:25px;display:inline-block;margin-left:-8px;
+}
+.item-list .item .item-price b{
+	font-size:16px;
+}
+.item-list .item .item-price .old-price{
+	color:gray;text-decoration: line-through;font-size: 14px;font-weight:normal;
+	letter-spacing: -1px;font-family: Tahoma,Helvetica,Arial,'宋体',sans-serif;margin-left:-10px;
+}
+.item-list .item .item-price .buy{
+	width:87px;height:56px;background:url(/assets/images/front/index/buy.jpg);
+	position: absolute;right: 0px;
+}
+.item-list .item .item-price .nobuy{
+	width:87px;height:56px;background:url(/assets/images/front/index/nobuy.jpg);
+	position: absolute;right: 0px;
+}
+.clearfix{
+	clear:both;
+}
+.xiai-page{
+	padding:35px 0px;
+	text-align:center;
+}
+.xiai-page a.yema-or-cur{
+	color:#DD1B1B;
+	text-decoration:none; 
+	display:inline-block;
+	background:#fff;
+	padding:8px 15px;
+	border-color: rgb(231, 230, 230);
+	box-shadow: 3px 1px 3px rgb(204, 204, 204);
+	font-weight: bold;
+}
+.xiai-page b.cur{
+	display:inline-block;
+	background:#DD1B1B;
+	color:#F5FF09;
+	padding:8px 15px;
+}

@@ -1,0 +1,101 @@
+@CHARSET "gbk";
+.xiai-foot-around{
+	background:url(/assets/images/front/index/background_bg.png);
+	padding:0px 0px 20px 0px;border-top:solid 3px #CF201C;
+}
+.xiai-foot-around .xiai-foot{
+	width:990px;height:100%;margin:0 auto;display:none;
+	background:url(/assets/images/front/index/foot_filter_hover.jpg);
+	position:relative;
+}
+.xiai-foot-around .xiai-foot a{
+	display:inline-block;
+	float:left;
+	width:247.5px;
+	height:100%;
+}
+.xiai-foot-around .tongji{
+	display:none;
+}
+/* about*/
+.xiai-foot-around .about-around{
+	background:#fff;
+}
+.xiai-foot-around .about{
+	width:1080px;margin:0 auto;
+}
+.xiai-foot-around .about li{
+	float:left;list-style-type:none;padding:15px 50px 0px 10px;border-right:#ccc 1px solid;height:150px;font-size:13px;color:gray;
+}
+.xiai-foot-around .about li.tail{
+	border:none;
+}
+.xiai-foot-around .about li.tail a.wm{
+	float:right;
+}
+.xiai-foot-around .about li span{
+	display:block;font-weight:600;margin-bottom:5px;color:#aaa;font-size:15px;
+}
+.xiai-foot-around .about li a{
+	display:block;text-decoration:none;color:gray;margin-bottom:3px;
+}
+.xiai-foot-around .about li  img{
+	width:100px;height:100px;
+}
+/* end-about*/
+.xiai-foot-around .links{
+	width:1080px;margin:10px auto;color:#fff;font-size:14px;color:gray;
+}
+.xiai-foot-around .links .link a{
+	color:#fff;font-size:14px;margin-right:10px;text-decoration:none;color:gray;
+}
+.xiai-foot-around .links .link{
+	width:100%;padding-top:10px;margin:10px auto;text-align:center;
+}
+#gotop{ 
+	display:block;  
+	width:60px; 
+	height:60px;
+	position:fixed;  
+	bottom:30px;  
+	right:40px; 
+	border-radius:10px 10px 10px 10px;   
+	text-decoration:none;  
+	display:none;  
+	background-color:#999999;     
+}
+#gotop span{ 
+	display:block; 
+	width:60px; 
+	color:#dddddd; 
+} 
+#gotop span:hover{ 
+	color:#cccccc; 
+} 
+#gotop span{ 
+	font-size:40px; 
+	text-align:center; 
+	margin-top:4px; 
+}
+
+.right-sider{
+	position:fixed;
+	right: 5px;
+	top:170px;
+	width:120px;
+	background:url(/assets/images/front/sider.png);
+}
+.right-sider a{
+	display:block;
+	width:100%;
+	height:29px;
+}
+.right-sider a.sider-cat:hover{
+	color:#BA3061;
+}
+.right-sider a.sider-head{
+	height:56px;
+}
+.right-sider a.sider-top{
+	height:50px;
+}

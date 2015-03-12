@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title>后台  - 商品采集</title>
+<link rel="stylesheet" href="/assets/stylesheets/admin/head.css" />
+<link rel="stylesheet" href="/assets/stylesheets/admin/proget.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+<script src="http://a.tbcdn.cn/apps/top/x/sdk.js?appkey=21511111"></script>
+<script language="javascript">
+$(document).ready(function(){	
+	$("input[name=updateyj]").hide();	
+});
+</script>
+</head>
+<body>
+	{include file="admin/head.html"}
+	<div class="admin-proget-around">
+		<div class="admin-proget">
+			<div class="proget-info">
+				<div class="proget-ctrl">
+					<h3>采集接口输出</h3>				
+					{foreach key=k item=v from=$website}
+					<a href="{spUrl c=admin a=uzcaijiapi type=$k}">{$v.name}</a>
+					{/foreach}
+				</div>
+				<div class="proget-ctrl">
+					<h3>一键采集</h3>
+					<a href="{spUrl c=admin a=yjuzcaiji}">一键采集</a>
+				</div>
+				<div class="proget-ctrl">
+					<h3>采集</h3>				
+					{foreach key=k item=v from=$website}
+					<a href="{spUrl c=admin a=uzcaiji type=$k}">{$v.name}<b>{$v.tcounts}</b></a>
+					{/foreach}
+				</div>
+				<!-- <div class="proget-ctrl">
+					<h3>佣金更新</h3>
+					<a href="?noyj=yes">未更新佣金</a>
+					<form action="{spUrl c=admin a=updateyj}" method=POST>	
+						<p>
+							<input type="button" value="获取佣金" name="yongjin"/>	
+							<input type="submit" value="更新佣金" name="updateyj"/>
+						</p>		
+						{foreach key=k item=v from=$items}
+							<input value="{$v.iid}"/>
+							<input name="yj{$v.iid}" id="yj{$v.iid}" value="{$v.commission_rate}">
+							<a target="_blank" href="http://item.taobao.com/item.htm?id={$v.iid}">看一下</a><br/>
+						{/foreach}
+					</form>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<script language="javascript">
+		$("input[name=yongjin]").click(function(){
+			/* 
+			** 当点击获取佣金的时候表单提交按钮出现
+			*/
+			{if $iidarr}
+				{foreach item=v from=$iidarr}
+					TOP.api('rest', 'get',{
+					      method:'taobao.taobaoke.widget.items.convert',
+					      fields:'commission_rate,promotion_price,volume',
+						  //num_iids:$('#proid').val().replace(/[^\d]/gi,''),
+						  num_iids:{$v.iid},
+					  },function(resp){
+						  if(resp.error_response){
+							 console.log('taobao.taobaoke.widget.items.convert接口获取商信息品失败!'+resp.error_response.msg);
+							 return false;
+						  }else{
+							var item = resp.taobaoke_items.taobaoke_item;
+							$("input#yj{$v.iid}").val(item[0].commission_rate / 100);
+							//$("input#cx<?php echo $v['iid']; ?>").val(item[0].promotion_price);
+							//$("input#vo<?php echo $v['iid']; ?>").val(item[0].volume);
+						  }
+					  })
+			  	{/foreach}
+			{/if}
+			$("input[name=updateyj]").show();
+		});
+	</script>
+</body>
+</html>

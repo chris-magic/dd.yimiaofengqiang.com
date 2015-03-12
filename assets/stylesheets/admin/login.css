@@ -1,0 +1,22 @@
+@CHARSET "gbk";
+.admin-login{
+	width:990px;
+	margin:0 auto;
+}
+.login-info{
+	padding-top:180px;
+}
+.login-window{
+	width:500px;
+	height:250px;
+	margin:0 auto;
+	border: solid rgb(231,230,230) 1px;
+	box-shadow: 3px 1px 3px rgb(204,204,204);
+}
+.login-window h5{
+	text-align:center; 
+}
+.login-window .login{
+	margin-top:80px;
+	text-align:center; 
+}

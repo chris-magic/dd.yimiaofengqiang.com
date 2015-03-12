@@ -1,0 +1,8 @@
+@CHARSET "gbk";
+.admin-head{
+	width:990px;
+	margin:0 auto;
+}
+.clearfix{
+	clear:both;
+}

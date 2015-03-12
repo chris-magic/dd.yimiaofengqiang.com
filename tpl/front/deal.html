@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title>一秒疯抢  - 商品详情页</title>
+<link rel="stylesheet" href="/assets/stylesheets/front/head.css" />
+<link rel="stylesheet" href="/assets/stylesheets/front/foot.css" />
+<link rel="stylesheet" href="/assets/stylesheets/front/deal.css" />
+<script type="text/javascript"  src="/assets/Javascripts/jquery-2.0.3.min.js"></script>
+<script type="text/javascript"  src="/assets/Javascripts/jquery.lazyload.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$(window).scroll(function() {
+		if($(window).scrollTop() >  $(".head-around").height()+80){
+			$(".head-nav-around").addClass("scoll_nav")
+		}else{
+			$(".head-nav-around").removeClass( "scoll_nav")
+		}
+		if( $(window).scrollTop() >200 ){  //判断滚动后高度超过200px,就显示  
+			$("#gotop").fadeIn(400); //淡出     
+		}else{      
+			$("#gotop").stop().fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动   
+		}
+	});
+        $("img.lazy").lazyload({
+            placeholder: "http://img03.taobaocdn.com/imgextra/i3/1602138689/T2__REXchOXXXXXXXX-1602138689.gif", 
+            effect: "fadeIn", 
+            failurelimit: 10
+        });
+})
+</script>
+</head>
+<body>
+{include file="front/head.html"}
+<div class="deal-main">
+	<div class="deal-left">
+		<div class="item-deal">
+			<div class="item-img">
+				<a target="_blank" href="{$pro.link}"><img src="{$pro.pic}" /></a>
+			</div>
+			<div class="item-tit">
+				<a target="_blank" href="{$pro.link}">{$pro.title}</a>
+			</div>
+			<span class="time">开始时间：{$pro.postdt}</span>
+			<del class="oprice">市场价:￥{$pro.oprice}元</del>
+			<span class="nprice">￥{$pro.nprice}</span><br/>
+			<a target="_blank"  href="{$pro.link}">
+				<span class="buy">立即购买</span>
+			</a>
+			<div class="clearfix"></div>
+		</div>
+                <div class="hr"></div>
+                    <div class="items-like">
+                            <p>一秒疯抢独家专享....</p>
+                            <div class="items">
+                                    <ul>
+                                            {foreach key=k item=v from=$dujia}
+                                                    <li>
+                                                            <a target="_blank" href="http://www.yimiaofengqiang.com/main/deal/id/{$v.id}.html">
+                                                                    <img class="lazy" data-original="{$v.pic}"/>
+                                                            </a>
+                                                            <div class="price">
+                                                                    <del>￥{$v.oprice}</del>
+                                                                    <span>￥{$v.nprice}</span>
+                                                                    <a target="_blank" href="http://www.yimiaofengqiang.com/main/deal/id/{$v.id}.html">立即购买</a>
+                                                            </div>
+
+                                                    </li>
+                                            {/foreach}
+                                            <div class="clearfix"></div>
+                                    </ul>
+                            </div>
+                    </div>
+                    <div class="clearfix"></div>
+	</div>
+	<div class="deal-right">
+		
+	</div>
+	<div class="clearfix"></div>
+</div>
+{include file="front/foot.html"}
+</body>
+</html>

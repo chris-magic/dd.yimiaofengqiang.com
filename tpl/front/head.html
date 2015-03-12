@@ -1,0 +1,51 @@
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="gbk"></script>
+<div class="head-tips-bar-around">
+	<div class="head-tips-bar">
+		<div class="left">
+			<wb:follow-button uid="3760830492" type="red_3" width="100%" height="24" ></wb:follow-button>
+		</div>
+		<div class="right">
+			{if !$supe_uid}
+			<a target="_blank" href="http://www.yimiaofengqiang.com/?c=user&a=login">登录</a>
+			<a target="_blank" href="http://www.yimiaofengqiang.com/?c=user&a=login&cmd=reg">免费注册</a>
+			{else}
+			<a target="_blank" href="http://www.yimiaofengqiang.com/?c=user&a=iinfo">{$smarty.cookies.ymfq_loginuser}</a>
+			<a target="_blank" href="http://www.yimiaofengqiang.com/?c=user&a=login&cmd=out">退出</a>
+			{/if}
+                        <a target="_blank" href="http://www.yimiaofengqiang.com/?c=main&a=baoming">卖家中心</a>
+		</div>
+	</div>
+</div>
+<div class="head-around">
+	<script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21726073"></script>
+	<!-- 返回顶部 -->
+	<!-- END - 返回顶部 -->
+	<div class="head-index">
+		<div class="logo"></div>
+		<div class="searchitem">
+			<form action="http://www.yimiaofengqiang.com/?c=main&a=index" method=POST>
+				<input class="sbox" name="searchKey" />
+				<input class="spress" type="submit" value="搜索" />
+			</form>
+		</div>
+		<div style="display:none;float:right;color:#fff;font-size:20px;margin:-40px 40px 0px 0px;">
+			站外地址:http://www.yimiaofengqiang.com<br/>
+			U站地址：http://yinxiang.uz.taobao.com
+		</div>
+		<div class="bmcq"></div>
+	</div>
+</div>
+<div class="head-nav-around">
+	<div class="head-nav">
+		<a href="http://www.yimiaofengqiang.com/">首页</a>
+                <a href="http://www.yimiaofengqiang.com/?c=main&a=index&act_from=1">一秒疯抢</a>
+		<a href="http://www.yimiaofengqiang.com/?c=main&a=index&price=1_10">9.9专区</a>
+		<a href="http://www.yimiaofengqiang.com/?c=main&a=index&price=10_20">19.9专区</a>
+		<a href="http://www.yimiaofengqiang.com/?c=main&a=index&price=20_30">29.9专区</a>
+		<a href="http://www.yimiaofengqiang.com/?c=main&a=index&price=30_40">39.9专区</a>
+                <a href="http://www.yimiaofengqiang.com/?c=main&a=index&price=40_9999">精品专区</a>
+		<a target="_blank" href="http://bd.yimiaofengqiang.com" class="cur">布丁推荐</a>
+		<a href="http://www.yimiaofengqiang.com/main/index/type/87.html">明日预告</a>
+		<a target="_blank" href="http://bbs.yimiaofengqiang.com">每日免单</a>
+	</div>
+</div>

@@ -759,7 +759,7 @@ class admin extends spController{
 						echo $v['iid'].' 添加失败,数据库操作失败!<br/>';
 					else{
 						//$this->upyjscript($v['iid'],$actType);
-						$this->updateyjPhp($v['iid']);
+//						$this->updateyjPhp($v['iid']);
 						echo $v['iid'].' 添加成功!<br/>';
 					}
 				}else{
@@ -769,7 +769,7 @@ class admin extends spController{
 						echo $v['iid'].' 更新失败,数据库操作失败!<br/>';
 					else{
 						//$this->upyjscript($v['iid'],$actType);
-						$this->updateyjPhp($v['iid']);
+//						$this->updateyjPhp($v['iid']);
 						echo $v['iid'].' 更新成功!<br/>';
 					}
 		
